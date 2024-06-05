@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* header & footer */
+body{@apply bg-gray-100}
+body header{@apply flex md:justify-between  bg-gray-100 h-10 uppercase md:px-4 shadow-md}
+.title-signup{@apply flex md:items-center}
+body header h1{@apply font-bold md:text-xl text-red-500}
+h2{@apply font-bold text-sm text-red-500 md:pl-2}
+.pages{@apply flex md:items-center md:px-10 }
+body header h2{@apply mx-4 hover:scale-125 transition ease-out duration-500}
+body footer{@apply mt-2 text-center py-6 bg-gray-200  font-semibold text-lg shadow-md}
+
+/* page */
+.main{@apply mt-12 flex justify-center}
+.content{@apply my-2 flex flex-col md:max-w-screen-md}
+.load{@apply text-xl}
+.job{@apply mt-2 flex flex-col bg-white shadow-md  border border-black hover:border-blue-500}
+.row-job{@apply flex justify-between space-x-2 px-2 pt-1}
+.title{@apply text-lg font-semibold}
+.city,
+.cat{@apply text-lg font-semibold px-2 pt-1}
+.desc{@apply text-slate-800  px-2 pt-2}
+.apply{@apply flex justify-center py-1}
+.button-form{@apply flex flex-col }
+.button-apply{@apply bg-blue-500 text-sm text-white rounded-lg px-2 py-1 max-w-fit hover:bg-gray-500}
+.delete-button{@apply text-red-500 text-lg hover:bg-gray-500}
+
+/*form.js*/
+.content-form{@apply flex justify-center mt-12 mb-12}
+label{@apply block text-red-500 font-bold mb-1}
+input{@apply block border-2 border-blue-400 w-96 h-10}
+.textarea{@apply block border-2 border-blue-400 w-96  h-40 }
+.submit{@apply block bg-blue-500 text-white rounded-full px-4 py-2 w-fit hover:bg-gray-500}
+
+/* search input*/
+.formSearch{@apply flex justify-center text-lg}
+.searchInput{@apply px-1 mr-1 border rounded-lg border-blue-500 }
+.submitSearch{@apply  text-blue-500  rounded-full px-2 py-2 hover:bg-gray-500}
+
